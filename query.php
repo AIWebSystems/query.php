@@ -62,19 +62,19 @@ class Plugin_query extends Plugin
 		$query = ci()->pdb->table($parameters['table']);
 
 		// Select
-		$query = $query->select(explode('|', $parameters['select']));
+		$query->select(explode('|', $parameters['select']));
 
 		// Where
 		if ($parameters['where'])
-			$query = $query->where($parameters['where']);
+			$query->where($parameters['where']);
 
 		// Order by
 		if ($parameters['order_by'])
-			$query = $query->orderBy($parameters['order_by'], $parameters['sort']);
+			$query->orderBy($parameters['order_by'], $parameters['sort']);
 
 		// Limit
 		if ($parameters['limit'])
-			$query = $query->limit($parameters['limit']);
+			$query->limit($parameters['limit']);
 
 		
 		/**
